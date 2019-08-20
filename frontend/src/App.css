@@ -5,7 +5,7 @@ body {
 
 .nav-bar {
   width: 100%;
-  background-image: linear-gradient(to right top, #8C33E3, #696CE8, #4A9EEC);
+  background-image: linear-gradient( #003366, #4A9EEC);
   background-repeat: no-repeat;
   font-size: 16px;
   letter-spacing: 1.5px;
@@ -22,4 +22,39 @@ body {
   color: white;
   padding: 4px;
   font-family: 'Oswald', sans-serif;
+ }
+
+ .master-detail-element {
+  float:left;
+  margin: 10px 10px;
+  padding: 20px;
+  border: 2px solid #4A9EEC;
+}
+
+.sidebar {
+  width:25%;
+  overflow: scroll;
+}
+
+div.sidebar button {
+  width: 100%;
+ }
+ div.sidebar ul {
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+ }
+ div.sidebar ul li {
+  list-style: none;
+  border-bottom: 1px solid grey;
+  padding: 0 5px;
+ }
+ div.sidebar ul li:first-child {
+  border-top: 1px solid grey;
+ }
+ div.sidebar ul li:hover {
+  /* background-color: yellow; */
+  background-image: linear-gradient(#E6E6E6, #F7F7F7);
+  background-repeat: no-repeat;
  }

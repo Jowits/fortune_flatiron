@@ -40,6 +40,12 @@ fortune23 = Fortune.create(content: "Wrong question - You broke me - Twat.")
 fortune24 = Fortune.create(content: "Flying is simple, not hitting the ground is hard.")
 fortune25 = Fortune.create(content: "Nuclear annihilation process initialised beep beep.")
 fortune26 = Fortune.create(content: "Even a broken clock is right 2 times a day.")
+fortune27 = Fortune.create(content: "Something great will come down your chimney.")
+fortune28 = Fortune.create(content: "A dark stranger named React Native will tempt you... Avoid these advances and believe in the power of PWA...")
+fortune29 = Fortune.create(content: "Watch out for owls.")
+fortune30 = Fortune.create(content: "The moment you have anticipated is fast approaching. When you have climbed the mountain, you will wish you were still climbing.")
+fortune31 = Fortune.create(content: "Cheese will be a key part of your future.")
+fortune32 = Fortune.create(content: "Beware the many socked quicke. It brings bad weather...")
 
 
 3.times do

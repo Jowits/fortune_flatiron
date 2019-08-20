@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-             <Navbar />
+             <Navbar fortunes={this.state.fortunes}/>
              <FortuneContainer fortunes={this.state.fortunes}/>
       </div>
     );

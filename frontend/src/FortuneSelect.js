@@ -18,7 +18,7 @@ class FortuneSelect extends Component {
         return (
             <div onClick={this.handleClick}>
                 <img src={this.state.showBack ? back_crystal_ball : front_crystal_ball} alt="Flatiron Fortune ball" />
-                <p>{this.state.showBack ? this.props.selectedFortune.content : " "}</p>
+                <p className="fortune" >{this.state.showBack ? this.props.selectedFortune.content : " "}</p>
             </div>
         );
     }

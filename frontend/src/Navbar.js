@@ -8,9 +8,9 @@ class Navbar extends Component {
                 <form onSubmit={this.props.handleSubmit} onChange={(event) => this.props.handleChange(event)}>
                 <label className="textColor">
                     {"Name: "} 
-                    <input type="text" name="name" value={this.props.user}/>
+                    <input className="username" type="text" name="name" value={this.props.user}/>
                 </label>
-                <input type="submit" value="Submit" />
+                <input className="f6 link dim br3 ph3 pv2 mb2 dib white bg-navy button" type="submit" value="Submit" />
                 </form>
             </div>
         );

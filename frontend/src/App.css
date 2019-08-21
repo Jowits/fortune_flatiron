@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color:#236476;
  }
 
 span {
@@ -33,12 +34,15 @@ span {
   color: white;
   padding: 4px;
   font-family: 'Oswald', sans-serif;
-  font-size: 3em;
-  margin-left: 8em;
+  font-size: 5em;
+  margin-top: 0.2em;
+  margin-left: 5em;
  }
  
  img {
-   margin-left: 13em;
+   margin-left: 20em;
+   width: 45em;
+   height: 45em;;
  }
  img:hover {
   animation: shake 0.5s; 
@@ -68,9 +72,11 @@ span {
 }
 
 .sidebar {
-  width: 15em;
-  height: 30em;
+  width: 18em;
+  height: 45em;
   overflow: scroll;
+  border-radius: 0.4em;
+  background-color: white;
 }
 
 div.sidebar button {
@@ -100,3 +106,20 @@ div.sidebar button {
   background-repeat: no-repeat;
  }
 
+ .button {
+   margin-left: 1em;
+   border: rgb(031,176,225);
+   background-color: rgb(031,176,225);
+ }
+
+ .username {
+   border-radius: 0.4em;
+   height: 1.9em;
+ }
+
+ p.fortune {
+  
+
+
+
+ }

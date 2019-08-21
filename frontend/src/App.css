@@ -3,10 +3,14 @@ body {
   padding: 0;
  }
 
+.textColor {
+  color: rgb(031,176,225);
+  font-weight: bolder;
+}
+
 .nav-bar {
   width: 100%;
-  height: 8em;
-  background-image: linear-gradient( #003366, #4A9EEC);
+  background-image: linear-gradient( #003366, #236476);
   background-repeat: no-repeat;
   font-size: 16px;
   letter-spacing: 1.5px;
@@ -61,7 +65,3 @@ div.sidebar button {
   background-repeat: no-repeat;
  }
 
-.ballImage {
-   margin-left: 35em;
-   margin-top: 5em;
- }

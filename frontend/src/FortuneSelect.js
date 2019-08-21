@@ -5,7 +5,7 @@ import './App.css';
 class FortuneSelect extends Component {
     render() {
         return (
-            <div id="ballImage">
+            <div >
                 <img src={front_crystal_ball} alt="Flatiron Fortune ball"/>
             </div>
         );

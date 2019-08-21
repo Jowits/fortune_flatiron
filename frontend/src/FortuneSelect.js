@@ -10,13 +10,13 @@ class FortuneSelect extends Component {
 
     handleClick = () => {
         this.setState({showBack: !this.state.showBack})
-         if (this.state.showBack) return
-            this.props.getRandomFortune()
+        if (this.state.showBack) return
+        this.props.getRandomFortune()
     }
 
     render() {
         return (
-            <div onClick={this.handleClick}>
+            <div onClick={this.handleClick} >
                 <img src={this.state.showBack ? back_crystal_ball : front_crystal_ball} alt="Flatiron Fortune ball" />
                 <p className="fortune" >{this.state.showBack ? this.props.selectedFortune.content : " "}</p>
             </div>

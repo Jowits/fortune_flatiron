@@ -8,7 +8,10 @@ class FortuneContainer extends Component {
         return (
             <div>
                 <FortuneList fortunes={this.props.fortunes}/>
-                <FortuneSelect getRandomFortune={this.props.getRandomFortune} selectedFortune={this.props.selectedFortune}/>
+                <FortuneSelect 
+                    getRandomFortune={this.props.getRandomFortune} 
+                    selectedFortune={this.props.selectedFortune}
+                />
             </div>
         );
     }

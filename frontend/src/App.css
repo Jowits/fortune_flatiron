@@ -77,6 +77,8 @@ span {
   overflow: scroll;
   border-radius: 0.4em;
   background-color: white;
+  border: none;
+  margin-left: 2em;
 }
 
 div.sidebar button {

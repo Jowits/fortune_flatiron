@@ -14,8 +14,11 @@ class App extends Component {
   state = {
     fortunes: [],
     selectedUser: null,
+    user: null,
     newFortunes: [],
-    selectedFortune: []
+    selectedFortune: null,
+    allUsers: [],
+    newUserFortune: null
   }
 
   componentDidMount() {
@@ -26,18 +29,40 @@ class App extends Component {
     fetch("http://localhost:3000/api/v1/fortunes")
     .then(resp => resp.json())
     .then(newFortunes => this.setState({newFortunes}))
+
+    fetch(usersURL)
+    .then(resp => resp.json())
+    .then(allUsers => this.setState({allUsers}))
+
   }
 
   getRandomFortune = () => {
     let fortunesToRandomize = this.state.newFortunes
     let selectedAtRandom = fortunesToRandomize[Math.floor(Math.random() * fortunesToRandomize.length)];
-    this.setState({selectedFortune: selectedAtRandom})
+    this.setState({selectedFortune: selectedAtRandom}, 
+    this.handleSubmitNewFortune)
   } 
+
+  handleSubmitNewFortune = () => {
+    fetch(fortunesURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        user_id: this.state.user.id,
+        fortune_id: this.state.selectedFortune.id
+      })
+      }).then(resp => resp.json())
+      .then(userFortune => this.setState({ fortunes: [...this.state.fortunes, userFortune]}))
+  };
 
   handleChange = (event) => {
     this.setState({selectedUser: event.target.value})
   } 
 
+  
   handleSubmit = (event) => {
     event.preventDefault()
     fetch(usersURL, {
@@ -48,8 +73,7 @@ class App extends Component {
       },
       body: JSON.stringify({username: this.state.selectedUser})
     }).then(resp => resp.json())
-    .then(console.log)
-    
+    .then(user => this.setState({user: user}))
   };
 
 
@@ -65,6 +89,7 @@ class App extends Component {
                 fortunes={this.state.fortunes}
                 getRandomFortune={this.getRandomFortune}
                 selectedFortune={this.state.selectedFortune}
+                handleSubmitNewFortune={this.handleSubmitNewFortune}
               />
       </div>
     );

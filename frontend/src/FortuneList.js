@@ -6,7 +6,7 @@ class FortuneList extends Component {
         return (
             <div className='master-detail-element sidebar'>
                 {
-                    this.props.fortunes.map(fortune => < FortuneCard fortune={fortune}/>)
+                    this.props.fortunes.reverse().map((fortune, i) => < FortuneCard fortune={fortune}/>)
                 }
             </div>
         );

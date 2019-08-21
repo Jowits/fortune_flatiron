@@ -39,6 +39,24 @@ span {
   margin-left: 5em;
  }
  
+ p.fortune {
+  position: absolute;
+  top: 58%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+
+ }
+
+ /* p.fortune {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
  img {
    margin-left: 20em;
    width: 45em;
@@ -119,9 +137,3 @@ div.sidebar button {
    height: 1.9em;
  }
 
- p.fortune {
-  
-
-
-
- }

@@ -74,6 +74,7 @@ class App extends Component {
       body: JSON.stringify({username: this.state.selectedUser})
     }).then(resp => resp.json())
     .then(user => this.setState({user: user}))
+    .then(this.setState({selectedUser: ""}))
   };
 
 
@@ -90,6 +91,7 @@ class App extends Component {
                 getRandomFortune={this.getRandomFortune}
                 selectedFortune={this.state.selectedFortune}
                 handleSubmitNewFortune={this.handleSubmitNewFortune}
+                selectedUser={this.state.selectedUser}
               />
       </div>
     );
